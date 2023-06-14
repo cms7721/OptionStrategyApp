@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Strategy Picker</title>
+    <link rel="stylesheet" href="../static/css/index.css">
+</head>
+<body>
+	<div class="container">
+        <h1>Options Strategy Picker</h1>
+        <form action="strategies.html" method="GET">
+			<div class="greeks">
+				<div class="greek-option">
+					<h2>Delta (Δ)</h2>
+					<div class="greek-button">
+						<label><input type="radio" name="delta" value="Long">Long</label>
+						<label><input type="radio" name="delta" value="Neutral">Neutral</label>
+						<label><input type="radio" name="delta" value="Short">Short</label>
+						<label><input type="radio" name="delta" checked value="N/A">N/A</label>
+					</div>
+				</div>
+				<div class="greek-option">
+					<h2>Gamma (Γ)</h2>
+					<div class="greek-button">
+						<label><input type="radio" name="gamma" value="Long">Long</label>
+						<label><input type="radio" name="gamma" value="Neutral">Neutral</label>
+						<label><input type="radio" name="gamma" value="Short">Short</label>
+						<label><input type="radio" name="gamma" checked value="N/A">N/A</label>
+					</div>
+				</div>
+				<div class="greek-option">
+					<h2>Theta (Θ)</h2>
+					<div class="greek-button">
+						<label><input type="radio" name="theta" value="Long">Long</label>
+						<label><input type="radio" name="theta" value="Neutral">Neutral</label>
+						<label><input type="radio" name="theta" value="Short">Short</label>
+						<label><input type="radio" name="theta" checked value="N/A">N/A</label>
+					</div>
+				</div>
+				<div class="greek-option">
+					<h2>Vega (ν)</h2>
+					<div class="greek-button">
+						<label><input type="radio" name="vega" value="Long">Long</label>
+						<label><input type="radio" name="vega" value="Neutral">Neutral</label>
+						<label><input type="radio" name="vega" value="Short">Short</label>
+						<label><input type="radio" name="vega" checked value="N/A">N/A</label>
+					</div>
+				</div>
+				<div class="greek-option">
+					<h2>Net Premium</h2>
+					<div style="margin-left: 40px;">
+						<label><input type="radio" name="net" value="Credit">Credit</label>
+						<label><input type="radio" name="net" value="Debit">Debit</label>
+						<label><input type="radio" name="net" checked value="N/A">N/A</label>
+					</div>
+				</div>
+			</div>
+			<div class="greek-btn">
+				<button class="greek-btn" type="submit">Go</button>
+			</div>
+		</form>
+	</div>
+	<p class="disclaimer">Not financial advice. Not an exhaustive list. Does not include commissions and other fees. Always perform your own research before investing.<br>
+		© 2023 Cole Schutzman, All Rights Reserved</p>
+</body>
+</html>

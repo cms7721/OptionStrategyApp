@@ -1,0 +1,32 @@
+body {
+    text-align: center;
+    background-color: #111111;
+    color: #ffffff;
+    border-color: #000000;
+    margin-top: 20px;
+}
+
+.back {
+    text-align: center;
+    background-color: #111111;
+    color: #ffffff;
+    border-color: #000000;
+    margin-top: 20px;
+}
+
+p {
+    position: relative;
+    max-width: 700px;
+    margin: auto;
+}
+
+.disclaimer {
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 9px;
+    color: #ffffff;
+    height: 1px;
+    margin-left: 281px;
+}

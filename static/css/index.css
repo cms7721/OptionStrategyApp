@@ -1,0 +1,59 @@
+* {
+    font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+body {
+    background-color: #111111;
+    color: #ffffff;
+    min-height: 96vh;
+    position: relative;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 1px;
+}
+
+.greeks {
+    padding-left: 55px;
+}
+
+.greek-option {
+    display: inline-block;
+    flex-direction: row;
+    align-items: flex;
+    margin-right: 0px;
+    margin-bottom: 30px;
+}
+
+
+label {
+    display: flex;
+    align-items: center;
+    margin-left: -5px;
+}
+
+h2 {
+    margin: 0;
+    padding-right: 50px;
+}
+
+.greek-btn {
+    text-align: center;
+    background-color: #111111;
+    color: #ffffff;
+    border-color: #000000;
+    margin-top: 0px;
+}
+
+.disclaimer {
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 9px;
+    color: #ffffff;
+    height: 1px;
+}
