@@ -6,25 +6,27 @@
 </head>
 <body>
 	<div class="container">
-	<form action="/">
-		<button class="back">Back</button>
-	</form>
-	<div name="greeks">
-		<h3>Delta: {{greeks[0]}}   Gamma: {{greeks[1]}}   Theta: {{greeks[2]}}   Vega: {{greeks[3]}}   Net: {{greeks[4]}}</h3>
-	</div>
-		{% if Strategies|length > 0 %}
-			{% for strat in Strategies %}
-			<div name="strategy" style="width:100%; text-align: center; margin-bottom: 50px;">
-				<h1>{{strat[0]}}</h1>
-				<img src="static/imgs/{{strat[0]}}.png"></img>
-				<p>{{strat[1]}}</p>
-			</div>
-			{% endfor %}
-		{% else %}
-			<p class="empty">No strategies found for that combination. Try another one.</p>
-		{% endif %}
+		<span name="top">
+			<form action="/">
+				<button class="back">Back</button>
+			</form>
+			<span name="greeks">
+				<h3>Delta: {{greeks[0]}}   Gamma: {{greeks[1]}}   Theta: {{greeks[2]}}   Vega: {{greeks[3]}}   Net: {{greeks[4]}}</h3>
+			</span>
+		</span>
+			{% if Strategies|length > 0 %}
+				{% for strat in Strategies %}
+				<div name="strategy" style="width:100%; text-align: center; margin-bottom: 50px;">
+					<h1>{{strat[0]}}</h1>
+					<img src="static/imgs/{{strat[0]}}.png"></img>
+					<p>{{strat[1]}}</p>
+				</div>
+				{% endfor %}
+			{% else %}
+				<p class="empty">No strategies found for that combination. Try another one.</p>
+			{% endif %}
 	</div>
 	<p class="disclaimer">Not financial advice. Not an exhaustive list. Does not include commissions and other fees. Always perform your own research before investing.<br>
-		©2023 Cole Schutzman, All Rights Reserved</p>
+		©2023 All Rights Reserved</p>
 </body>
 </html>
