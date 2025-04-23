@@ -1,13 +1,15 @@
 #Option Strategy Web Applet
 from flask import Flask, render_template, request, redirect, session
+from datetime import date
 
 app = Flask(__name__,static_folder="static")
 host = 'http://127.0.0.1:5000/'
+year = date.today().year
 
 
 @app.route('/', methods=['GET'])
 def index():
-    return render_template('home.html')
+    return render_template('home.html',Year=year)
 
 @app.route('/strategies.html', methods=['GET'])
 def strats():
@@ -17,11 +19,11 @@ def strats():
     vega = request.args.get('vega')
     net = request.args.get('net')
     Strategies = get_strats(delta,gamma,theta,vega,net)
-    return render_template('strategies.html',Strategies=Strategies,greeks=[delta,gamma,theta,vega,net])
+    return render_template('strategies.html',Strategies=Strategies,greeks=[delta,gamma,theta,vega,net],Year=year)
 
 @app.route('/strategy.html',methods=['GET'])
 def strat():
-    return render_template('strategy.html',strategy=strategy(request.args.get('strategy')))
+    return render_template('strategy.html',strategy=strategy(request.args.get('strategy')),Year=year)
 
 
 def get_strats(delta,gamma,theta,vega,net):
